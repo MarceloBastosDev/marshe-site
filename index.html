@@ -270,8 +270,9 @@ footer{background:var(--dark);border-top:3px solid var(--orange);padding:2rem 5%
 </footer>
 
 <script>
-// Fix: garante que a página sempre inicia no topo
+// Fix: remove hash da URL e garante início no topo
 if(history.scrollRestoration)history.scrollRestoration='manual';
+if(window.location.hash)history.replaceState(null,null,' ');
 window.scrollTo(0,0);
 const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';cur2.style.left=e.clientX+'px';cur2.style.top=e.clientY+'px';});
