@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Marshê Studio 3D</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --orange:#F44010;
+  --orange-light:#FF6B35;
+  --green:#3DD600;
+  --green-dark:#28a800;
+  --dark:#0D0D0D;
+  --dark2:#111111;
+  --dark3:#1A1A1A;
+  --white:#FFFFFF;
+  --muted:#888;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--white);font-family:'Poppins',sans-serif;overflow-x:hidden;cursor:none;}
+
+#cur{position:fixed;width:12px;height:12px;background:var(--orange);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+#cur2{position:fixed;width:36px;height:36px;border:2px solid var(--orange);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.5;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:.9rem 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(13,13,13,.95);backdrop-filter:blur(20px);border-bottom:3px solid var(--orange);}
+.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;margin-left:2rem;font-size:.82rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:.3s;}
+.nav-links a:hover{color:var(--orange);}
+
+/* LOGO SVG — fiel à marca */
+.marshe-logo{display:inline-block;}
+.marshe-logo svg{overflow:visible;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--dark);}
+/* fundo laranja forte no topo direito */
+.hero-blob1{position:absolute;top:-120px;right:-120px;width:550px;height:550px;background:radial-gradient(circle,var(--orange) 0%,transparent 70%);opacity:.55;pointer-events:none;}
+.hero-blob2{position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:.25;pointer-events:none;}
+.hero-content{position:relative;z-index:1;text-align:center;padding:0 1.5rem;}
+.hero-logo-wrap{margin-bottom:2.5rem;animation:float 5s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-badge{display:inline-block;background:var(--green);color:#000;font-size:.72rem;font-weight:800;letter-spacing:4px;text-transform:uppercase;padding:.4rem 1.4rem;border-radius:3px;margin-bottom:1.5rem;}
+.hero-h1{font-size:clamp(2.5rem,8vw,6rem);font-weight:900;line-height:1;margin-bottom:1.2rem;}
+.hero-h1 .w1{display:block;color:var(--white);}
+.hero-h1 .w2{display:block;color:var(--orange);-webkit-text-stroke:2px var(--orange);-webkit-text-fill-color:transparent;}
+.hero-sub{color:var(--muted);font-size:1rem;max-width:460px;margin:0 auto 2.8rem;line-height:1.8;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.4rem;font-size:.88rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:5px;transition:.3s;border:2px solid transparent;}
+.btn-orange{background:var(--orange);color:#fff;border-color:var(--orange);}
+.btn-orange:hover{background:transparent;color:var(--orange);}
+.btn-green{background:var(--green);color:#000;border-color:var(--green);}
+.btn-green:hover{background:transparent;color:var(--green);}
+.scroll-down{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.35;animation:bob 2.5s infinite;}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.scroll-down span{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;}
+.chevron{width:18px;height:18px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);}
+
+/* SECTIONS */
+section{padding:7rem 5%;}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:.7rem;}
+.eyebrow::before{content:'';width:28px;height:3px;background:var(--green);border-radius:2px;}
+.sec-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:1.5rem;}
+.sec-title em{font-style:normal;color:var(--orange);}
+
+/* SOBRE */
+#sobre{background:var(--dark2);border-top:4px solid var(--orange);}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-box{background:var(--dark3);border-radius:16px;padding:2rem;border-top:4px solid var(--green);position:relative;overflow:hidden;}
+.about-box::after{content:'';position:absolute;bottom:-40px;right:-40px;width:180px;height:180px;background:var(--orange);border-radius:50%;opacity:.07;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}
+.stat{background:var(--dark);border-radius:10px;padding:1.2rem;text-align:center;border-left:3px solid var(--orange);}
+.stat-n{font-size:1.9rem;font-weight:900;color:var(--orange);}
+.stat-l{font-size:.7rem;color:var(--muted);margin-top:.2rem;letter-spacing:1px;}
+.about-text p{color:var(--muted);line-height:1.9;margin-bottom:1rem;}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.chip{padding:.35rem 1rem;border-radius:3px;font-size:.78rem;font-weight:700;letter-spacing:.5px;}
+.chip-o{background:rgba(244,64,16,.15);color:var(--orange);border:1px solid rgba(244,64,16,.35);}
+.chip-g{background:rgba(61,214,0,.12);color:var(--green);border:1px solid rgba(61,214,0,.3);}
+
+/* PROJETOS */
+#projetos{background:var(--dark);border-top:4px solid var(--green);}
+.proj-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
+.card{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:var(--dark3);transition:.4s;cursor:pointer;}
+.card:hover{transform:translateY(-8px);border-color:var(--orange);box-shadow:0 20px 50px rgba(244,64,16,.2);}
+.card-thumb{height:190px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;position:relative;overflow:hidden;}
+.card-thumb .lbl{position:absolute;top:.8rem;right:.8rem;font-size:.62rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:.25rem .7rem;border-radius:3px;}
+.lbl-o{background:var(--orange);color:#fff;}
+.lbl-g{background:var(--green);color:#000;}
+.card-body{padding:1.2rem 1.4rem 1.5rem;}
+.card-body h3{font-size:.97rem;font-weight:700;margin-bottom:.35rem;}
+.card-body p{color:var(--muted);font-size:.81rem;line-height:1.6;}
+.card-mat{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.7rem;font-weight:800;color:var(--green);letter-spacing:2px;text-transform:uppercase;}
+.card-mat::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;}
+.th1{background:linear-gradient(135deg,#200800,#3a1200);}
+.th2{background:linear-gradient(135deg,#001800,#1a3a00);}
+.th3{background:linear-gradient(135deg,#1a0800,#2e1600);}
+.th4{background:linear-gradient(135deg,#200000,#380a00);}
+.th5{background:linear-gradient(135deg,#001a08,#003018);}
+.th6{background:linear-gradient(135deg,#0d0020,#1a0038);}
+
+/* PROCESSO */
+#processo{background:var(--orange);position:relative;overflow:hidden;}
+#processo::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:rgba(0,0,0,.12);border-radius:50%;}
+#processo::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%;}
+#processo .eyebrow{color:rgba(0,0,0,.5);}
+#processo .eyebrow::before{background:rgba(0,0,0,.4);}
+#processo .sec-title{color:#fff;}
+#processo .sec-title em{color:#000;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem;position:relative;z-index:1;}
+.step{background:rgba(0,0,0,.15);border-radius:12px;padding:1.8rem 1.4rem;text-align:center;border-top:3px solid rgba(255,255,255,.3);transition:.3s;}
+.step:hover{background:rgba(0,0,0,.25);border-color:#fff;}
+.step-n{font-size:2.2rem;font-weight:900;color:#fff;margin-bottom:.8rem;text-shadow:0 2px 12px rgba(0,0,0,.3);}
+.step h4{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.4rem;}
+.step p{color:rgba(255,255,255,.75);font-size:.8rem;line-height:1.6;}
+
+/* CONTATO */
+#contato{background:var(--dark2);border-top:4px solid var(--green);}
+.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.contato-left .sec-title em{color:var(--green);}
+.contato-left p{color:var(--muted);line-height:1.9;margin-bottom:2rem;}
+.wa-btn{display:inline-flex;align-items:center;gap:.9rem;padding:1.1rem 2.8rem;background:var(--green);color:#000;font-weight:800;font-size:1rem;text-decoration:none;border-radius:6px;letter-spacing:.5px;transition:.3s;box-shadow:0 8px 32px rgba(61,214,0,.3);}
+.wa-btn:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(61,214,0,.5);background:#4fff00;}
+.wa-btn svg{width:24px;height:24px;fill:#000;}
+.contato-right{background:var(--dark3);border-radius:16px;padding:2.5rem;border:1px solid rgba(255,255,255,.08);border-top:4px solid var(--orange);}
+.contato-right h3{font-size:1.2rem;font-weight:700;margin-bottom:1.5rem;color:var(--orange);}
+.info-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.info-item:last-child{border-bottom:none;}
+.info-icon{width:40px;height:40px;background:rgba(244,64,16,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.info-text{font-size:.88rem;color:var(--muted);}
+.info-text strong{display:block;color:var(--white);font-size:.9rem;margin-bottom:.1rem;}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:3px solid var(--orange);padding:2rem 5%;}
+.footer-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-in p{color:var(--muted);font-size:.78rem;}
+.footer-in span{color:var(--orange);}
+.footer-logo svg{height:28px;}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;}
+.rl{opacity:0;transform:translateX(-30px);transition:opacity .7s,transform .7s;}
+.rr{opacity:0;transform:translateX(30px);transition:opacity .7s,transform .7s;}
+.r.v,.rl.v,.rr.v{opacity:1;transform:none;}
+
+@media(max-width:900px){.about-wrap,.contato-grid,.steps{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<div id="cur"></div><div id="cur2"></div>
+
+<!-- NAV -->
+<nav>
+  <img src="1.png" height="40" alt="Marshê Studio 3D" style="border-radius:50%;">
+  <div class="nav-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <canvas id="ptcvs" style="position:absolute;inset:0;z-index:0;"></canvas>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <img src="1.png" width="200" height="200" alt="Marshê Studio 3D" style="border-radius:50%;filter:drop-shadow(0 0 40px rgba(244,64,16,.6));">
+    </div>
+    <span class="hero-badge">Impressão 3D Personalizada</span>
+    <h1 class="hero-h1">
+      <span class="w1">Do digital</span>
+      <span class="w2">ao real</span>
+    </h1>
+    <p class="hero-sub">Transformamos suas ideias em objetos únicos com precisão, criatividade e acabamento impecável.</p>
+    <div class="hero-btns">
+      <a href="#projetos" class="btn btn-orange">Ver Projetos</a>
+      <a href="#contato" class="btn btn-green">Pedir Orçamento</a>
+    </div>
+  </div>
+  <div class="scroll-down"><span>scroll</span><div class="chevron"></div></div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="about-wrap">
+    <div class="about-box rl">
+      <p style="color:var(--muted);font-size:.88rem;line-height:1.85;">A <strong style="color:#fff">Marshê Studio 3D</strong> nasceu da paixão por transformar ideias em objetos tangíveis. Trabalhamos com as melhores tecnologias para entregar produtos únicos, personalizados e de alta qualidade.</p>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Projetos Entregues</div></div>
+        <div class="stat"><div class="stat-n">4.9★</div><div class="stat-l">Satisfação</div></div>
+        <div class="stat"><div class="stat-n">FDM</div><div class="stat-l">& Resina SLA</div></div>
+        <div class="stat"><div class="stat-n">7d</div><div class="stat-l">Prazo Médio</div></div>
+      </div>
+      <div class="chips" style="margin-top:1.5rem;">
+        <span class="chip chip-o">PLA</span><span class="chip chip-o">PETG</span><span class="chip chip-o">ABS</span>
+        <span class="chip chip-g">Resina</span><span class="chip chip-g">Personalizado</span><span class="chip chip-g">Prototipagem</span>
+      </div>
+    </div>
+    <div class="rr">
+      <p class="eyebrow">Sobre nós</p>
+      <h2 class="sec-title">Cada peça conta<br><em>uma história</em></h2>
+      <p style="color:var(--muted);line-height:1.9;margin-bottom:1rem;">Objetos que carregam significado — da sua fé, do seu pet ou do seu espaço. Cada projeto é único, tratado com atenção especial do arquivo à entrega.</p>
+      <p style="color:var(--muted);line-height:1.9;">Atendemos pessoas físicas, artistas, arquitetos e empresas que precisam de soluções criativas em impressão 3D.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="proj-header">
+    <div>
+      <p class="eyebrow">Portfólio</p>
+      <h2 class="sec-title">Projetos em <em>Destaque</em></h2>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card r"><div class="card-thumb th1"><span class="lbl lbl-g">Popular</span>🐾</div><div class="card-body"><h3>Placas Pet Personalizadas</h3><p>Placas com nome do seu pet em formatos divertidos — osso, patinha e muito mais.</p><span class="card-mat">PLA · Personalizado</span></div></div>
+    <div class="card r"><div class="card-thumb th2">✝️</div><div class="card-body"><h3>Itens Religiosos & Fé</h3><p>Presépios, santos e peças decorativas com detalhes ultrafinos em resina.</p><span class="card-mat">Resina · Arte</span></div></div>
+    <div class="card r"><div class="card-thumb th3"><span class="lbl lbl-o">Novo</span>🐟</div><div class="card-body"><h3>Porta-objetos Decorativos</h3><p>Vasos, porta-canetas e organizadores com texturas e formas exclusivas.</p><span class="card-mat">PLA · Décor</span></div></div>
+    <div class="card r"><div class="card-thumb th4">🏆</div><div class="card-body"><h3>Troféus & Premiações</h3><p>Troféus personalizados para eventos, campeonatos e reconhecimentos.</p><span class="card-mat">PLA · Pintura</span></div></div>
+    <div class="card r"><div class="card-thumb th5">🎁</div><div class="card-body"><h3>Presentes Únicos</h3><p>Miniaturas, chaveiros e lembranças personalizadas para datas especiais.</p><span class="card-mat">PLA · Custom</span></div></div>
+    <div class="card r"><div class="card-thumb th6">⚙️</div><div class="card-body"><h3>Peças Técnicas</h3><p>Componentes funcionais e peças de reposição com precisão milimétrica.</p><span class="card-mat">PETG · ABS</span></div></div>
+  </div>
+</section>
+
+<!-- PROCESSO — fundo laranja -->
+<section id="processo">
+  <p class="eyebrow">Como Funciona</p>
+  <h2 class="sec-title">Simples <em>assim</em> 🤙</h2>
+  <div class="steps">
+    <div class="step r"><div class="step-n">01</div><h4>Você nos conta</h4><p>Manda sua ideia pelo WhatsApp — com ou sem arquivo 3D</p></div>
+    <div class="step r"><div class="step-n">02</div><h4>Orçamento</h4><p>Enviamos prazo e valor sem compromisso em até 24h</p></div>
+    <div class="step r"><div class="step-n">03</div><h4>Produção</h4><p>Imprimimos com cuidado e enviamos fotos do progresso</p></div>
+    <div class="step r"><div class="step-n">04</div><h4>Entrega</h4><p>Produto nas suas mãos com acabamento impecável</p></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contato-grid">
+    <div class="contato-left rl">
+      <p class="eyebrow">Contato</p>
+      <h2 class="sec-title">Vamos criar algo<br><em>incrível?</em></h2>
+      <p>Tem uma ideia? Quer transformar um projeto em objeto real? Chama a gente no WhatsApp — respondemos rápido e sem compromisso!</p>
+      <a href="https://wa.me/55XXXXXXXXXXX?text=Olá!%20Vi%20o%20portfólio%20da%20Marshê%20Studio%203D%20e%20gostaria%20de%20um%20orçamento!" target="_blank" class="wa-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+    <div class="contato-right rr">
+      <h3>Informações</h3>
+      <div class="info-item"><div class="info-icon">📍</div><div class="info-text"><strong>Localização</strong>Torres, Rio Grande do Sul</div></div>
+      <div class="info-item"><div class="info-icon">⏰</div><div class="info-text"><strong>Atendimento</strong>Seg–Sex 9h às 18h · Sáb 9h às 13h</div></div>
+      <div class="info-item"><div class="info-icon">📦</div><div class="info-text"><strong>Entrega</strong>Retirada local ou envio pelos Correios</div></div>
+      <div class="info-item"><div class="info-icon">💬</div><div class="info-text"><strong>Resposta</strong>Em até 24 horas úteis</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-in">
+    <img src="1.png" height="28" alt="Marshê Studio 3D" style="border-radius:50%;">
+    <p>© 2025 <span>Marshê Studio 3D</span> — Todos os direitos reservados</p>
+    <p>Feito com <span>♥</span> e muito filamento</p>
+  </div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';cur2.style.left=e.clientX+'px';cur2.style.top=e.clientY+'px';});
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur2.style.transform='translate(-50%,-50%) scale(2)';cur2.style.borderColor='var(--green)';});
+  el.addEventListener('mouseleave',()=>{cur2.style.transform='translate(-50%,-50%) scale(1)';cur2.style.borderColor='var(--orange)';});
+});
+// particles
+const cvs=document.getElementById('ptcvs'),ctx=cvs.getContext('2d');
+let W,H,pts=[];
+function rs(){W=cvs.width=innerWidth;H=cvs.height=innerHeight;pts=[];for(let i=0;i<50;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*2+.5,c:Math.random()>.5?'rgba(244,64,16,':'rgba(61,214,0,'});}
+function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+'0.4)';ctx.fill();});requestAnimationFrame(draw);}
+window.addEventListener('resize',rs);rs();draw();
+// reveal
+const ob=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.1});
+document.querySelectorAll('.r,.rl,.rr').forEach(el=>ob.observe(el));
+</script>
+</body>
+</html>
