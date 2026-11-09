@@ -1,0 +1,1229 @@
+{
+  "_como_usar": "Para adicionar uma peça, copie um bloco de produto, troque os dados e salve. 'id' sem espaços nem acentos. 'preco' em reais (use ponto: 12.5). 'fotos': caminhos em assets/produtos/ (WebP de preferência; se o nome terminar em -960.webp, o site procura também a versão -480.webp). Sem fotos, aparece uma arte provisória da marca. 'adicionado' (AAAA-MM-DD) é usado na ordenação por novidade. 'destaque' define a ordem padrão (menor = aparece antes). OFERTA (Black Friday): acrescente \"precoDe\" com o preço antigo, ex.: \"preco\": 30, \"precoDe\": 39. O site risca o preço antigo, mostra o selo -X% Black Friday e cria o filtro Ofertas no topo. KITS: \"itensKit\" lista os ids das peças do kit (aparece na página do produto); use \"precoDe\" com a soma das peças. COMBINE COM: \"combina\" lista ids de peças sugeridas no produto e no carrinho. SOB CONSULTA: produto sem preço usa \"sobConsulta\": true (botão Pedir orçamento no WhatsApp). Para vender direto, apague sobConsulta e coloque \"preco\".",
+  "produtos": [
+    {
+      "id": "jesusinho",
+      "nome": "Jesusinho",
+      "descricao": "O Jesusinho sentadinho que conquista todo mundo. Fica lindo na estante, no carro ou de presente.",
+      "preco": 20,
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [
+        "Mais pedido"
+      ],
+      "variacoes": {
+        "nome": "Tamanho",
+        "opcoes": [
+          {
+            "nome": "4 cm",
+            "preco": 20
+          },
+          {
+            "nome": "7 cm",
+            "preco": 30
+          }
+        ]
+      },
+      "fotos": [
+        "assets/produtos/jesusinho-ig-1-960.webp",
+        "assets/produtos/jesusinho-ig-2-960.webp",
+        "assets/produtos/jesusinho-1-960.webp",
+        "assets/produtos/jesusinho-2-960.webp"
+      ],
+      "adicionado": "2026-08-01",
+      "destaque": 1,
+      "combina": [
+        "nossa-senhora-aparecida",
+        "rosario-fidget",
+        "chaveiro-nossa-senhora"
+      ]
+    },
+    {
+      "id": "sao-miguel-arcanjo",
+      "nome": "São Miguel Arcanjo",
+      "descricao": "Estátua de São Miguel com asas douradas em destaque e base circular. Uma peça de decoração cheia de detalhes, que protege e embeleza a casa.",
+      "preco": 35,
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/sao-miguel-arcanjo-1-960.webp",
+        "assets/produtos/sao-miguel-arcanjo-ig-1-960.webp"
+      ],
+      "adicionado": "2026-07-10",
+      "destaque": 3,
+      "combina": [
+        "rosario-fidget",
+        "kit-protecao",
+        "nossa-senhora-aparecida"
+      ]
+    },
+    {
+      "id": "nossa-senhora-aparecida",
+      "nome": "Nossa Senhora Aparecida",
+      "descricao": "Manto com flores em relevo, coroa dourada e nome gravado na base. Acabamento em dois tons, feito peça por peça.",
+      "preco": 30,
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [
+        "Mais pedido"
+      ],
+      "fotos": [
+        "assets/produtos/nossa-senhora-aparecida-1-960.webp",
+        "assets/produtos/nossa-senhora-aparecida-ig-1-960.webp"
+      ],
+      "adicionado": "2026-07-05",
+      "destaque": 2,
+      "combina": [
+        "porta-terco-nossa-senhora",
+        "chaveiro-nossa-senhora",
+        "kit-fe"
+      ]
+    },
+    {
+      "id": "nossa-senhora-de-guadalupe",
+      "nome": "Nossa Senhora de Guadalupe",
+      "descricao": "Imagem em relevo com resplendor ao redor e base de rosas. Linda na mesa, na estante ou no altar.",
+      "preco": 35,
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/nossa-senhora-de-guadalupe-1-960.webp",
+        "assets/produtos/nossa-senhora-de-guadalupe-ig-1-960.webp"
+      ],
+      "adicionado": "2026-07-01",
+      "destaque": 5,
+      "combina": [
+        "nossa-senhora-minimalista",
+        "nossa-senhora-aparecida",
+        "kit-nossas-senhoras"
+      ]
+    },
+    {
+      "id": "nossa-senhora-minimalista",
+      "nome": "Nossa Senhora minimalista",
+      "descricao": "Versão de traço limpo em azul e branco, com auréola e terço dourados. Moderna, delicada e perfeita para presentear.",
+      "preco": 25,
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "fotos": [
+        "assets/produtos/nossa-senhora-minimalista-1-960.webp",
+        "assets/produtos/nossa-senhora-minimalista-ig-1-960.webp",
+        "assets/produtos/nossa-senhora-minimalista-ig-2-960.webp"
+      ],
+      "adicionado": "2026-10-20",
+      "destaque": 6,
+      "combina": [
+        "nossa-senhora-de-guadalupe",
+        "nossa-senhora-aparecida",
+        "kit-nossas-senhoras"
+      ]
+    },
+    {
+      "id": "porta-terco-nossa-senhora",
+      "nome": "Porta-terço Nossa Senhora",
+      "descricao": "Imagem com coroa e manto que guarda o terço na base e ainda serve como pia de água benta. Bonita e útil no dia a dia.",
+      "preco": 35,
+      "categorias": [
+        "Utilitários",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "fotos": [
+        "assets/produtos/porta-terco-nossa-senhora-1-960.webp",
+        "assets/produtos/porta-terco-nossa-senhora-ig-1-960.webp"
+      ],
+      "adicionado": "2026-10-10",
+      "destaque": 7,
+      "combina": [
+        "nossa-senhora-aparecida",
+        "rosario-fidget",
+        "kit-fe"
+      ]
+    },
+    {
+      "id": "chaveiro-nossa-senhora",
+      "nome": "Chaveiro Nossa Senhora",
+      "descricao": "Chaveiro de Nossa Senhora com argola e tassel decorativo. Proteção nas chaves, na bolsa ou na mochila.",
+      "preco": 15,
+      "categorias": [
+        "Chaveiros",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/chaveiro-nossa-senhora-1-960.webp",
+        "assets/produtos/chaveiro-nossa-senhora-ig-1-960.webp"
+      ],
+      "adicionado": "2026-06-15",
+      "destaque": 8,
+      "combina": [
+        "rosario-fidget",
+        "marcador-personalizado",
+        "kit-lembranca"
+      ]
+    },
+    {
+      "id": "rosario-fidget",
+      "nome": "Rosário Fidget",
+      "descricao": "Rosário de bolso para rezar com o toque, estampado dos dois lados e com tassel. Ajuda a rezar e a acalmar. Você escolhe a cor do cordão.",
+      "preco": 15,
+      "categorias": [
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "variacoes": {
+        "nome": "Cor do cordão",
+        "opcoes": [
+          {
+            "nome": "Preto",
+            "preco": 15
+          },
+          {
+            "nome": "Branco",
+            "preco": 15
+          },
+          {
+            "nome": "Azul",
+            "preco": 15
+          },
+          {
+            "nome": "Marrom",
+            "preco": 15
+          }
+        ]
+      },
+      "fotos": [
+        "assets/produtos/rosario-fidget-1-960.webp",
+        "assets/produtos/rosario-fidget-ig-1-960.webp",
+        "assets/produtos/rosario-fidget-ig-2-960.webp"
+      ],
+      "adicionado": "2026-10-28",
+      "destaque": 4,
+      "combina": [
+        "sao-miguel-arcanjo",
+        "porta-terco-nossa-senhora",
+        "kit-protecao"
+      ]
+    },
+    {
+      "id": "mascara-obito",
+      "nome": "Máscara do Obito",
+      "descricao": "Máscara em tamanho real, impressa em 3D e lixada, com acabamento rústico. Vem com alça ajustável para usar no cosplay ou expor.",
+      "preco": 139,
+      "categorias": [
+        "Colecionáveis"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/mascara-obito-1-960.webp",
+        "assets/produtos/mascara-obito-2-960.webp"
+      ],
+      "adicionado": "2026-08-25",
+      "destaque": 9,
+      "combina": [
+        "marcador-personalizado",
+        "chaveiro-nossa-senhora"
+      ]
+    },
+    {
+      "id": "marcador-personalizado",
+      "nome": "Marcador personalizado",
+      "descricao": "Marcador de página feito com o nome, a logo ou o símbolo do seu grupo, pastoral ou empresa. Simples, barato e inesquecível.",
+      "preco": 10,
+      "categorias": [
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Nome ou frase do marcador",
+      "fotos": [
+        "assets/produtos/marcador-personalizado-1-960.webp",
+        "assets/produtos/marcador-personalizado-ig-1-960.webp",
+        "assets/produtos/marcador-personalizado-ig-2-960.webp"
+      ],
+      "adicionado": "2026-09-15",
+      "destaque": 10,
+      "combina": [
+        "chaveiro-nossa-senhora",
+        "kit-lembranca",
+        "rosario-fidget"
+      ]
+    },
+    {
+      "id": "kit-fe",
+      "nome": "Kit Fé",
+      "descricao": "Nossa Senhora Aparecida, o porta-terço e o chaveiro de Nossa Senhora juntos, com 15% de desconto. Presente completo para quem tem devoção.",
+      "preco": 68,
+      "precoDe": 80,
+      "categorias": [
+        "Kits",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "itensKit": [
+        "nossa-senhora-aparecida",
+        "porta-terco-nossa-senhora",
+        "chaveiro-nossa-senhora"
+      ],
+      "fotos": [
+        "assets/produtos/kit-fe-1-960.webp",
+        "assets/produtos/nossa-senhora-aparecida-1-960.webp"
+      ],
+      "adicionado": "2026-11-07",
+      "destaque": 0.5,
+      "combina": [
+        "rosario-fidget",
+        "jesusinho"
+      ]
+    },
+    {
+      "id": "kit-protecao",
+      "nome": "Kit Proteção",
+      "descricao": "São Miguel Arcanjo com o Rosário Fidget, com 15% de desconto. Você escolhe a cor do cordão do rosário.",
+      "preco": 42.5,
+      "precoDe": 50,
+      "categorias": [
+        "Kits",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "itensKit": [
+        "sao-miguel-arcanjo",
+        "rosario-fidget"
+      ],
+      "fotos": [
+        "assets/produtos/kit-protecao-1-960.webp",
+        "assets/produtos/sao-miguel-arcanjo-1-960.webp"
+      ],
+      "adicionado": "2026-11-07",
+      "destaque": 2.5,
+      "variacoes": {
+        "nome": "Cor do cordão do rosário",
+        "opcoes": [
+          {
+            "nome": "Preto",
+            "preco": 42.5
+          },
+          {
+            "nome": "Branco",
+            "preco": 42.5
+          },
+          {
+            "nome": "Azul",
+            "preco": 42.5
+          },
+          {
+            "nome": "Marrom",
+            "preco": 42.5
+          }
+        ]
+      },
+      "combina": [
+        "porta-terco-nossa-senhora",
+        "chaveiro-nossa-senhora"
+      ]
+    },
+    {
+      "id": "kit-nossas-senhoras",
+      "nome": "Kit Nossas Senhoras",
+      "descricao": "Aparecida, Guadalupe e a Nossa Senhora minimalista juntas, com 15% de desconto. Lindo para a casa ou o altar.",
+      "preco": 76.5,
+      "precoDe": 90,
+      "categorias": [
+        "Kits",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "itensKit": [
+        "nossa-senhora-aparecida",
+        "nossa-senhora-de-guadalupe",
+        "nossa-senhora-minimalista"
+      ],
+      "fotos": [
+        "assets/produtos/kit-nossas-senhoras-1-960.webp",
+        "assets/produtos/nossa-senhora-aparecida-1-960.webp"
+      ],
+      "adicionado": "2026-11-07",
+      "destaque": 3.5,
+      "combina": [
+        "porta-terco-nossa-senhora",
+        "rosario-fidget"
+      ]
+    },
+    {
+      "id": "kit-lembranca",
+      "nome": "Kit Lembrança",
+      "descricao": "Chaveiro de Nossa Senhora e marcador personalizado com o nome ou frase que você quiser, com 15% de desconto. Ótimo para presentear.",
+      "preco": 21.25,
+      "precoDe": 25,
+      "categorias": [
+        "Kits",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "itensKit": [
+        "chaveiro-nossa-senhora",
+        "marcador-personalizado"
+      ],
+      "fotos": [
+        "assets/produtos/kit-lembranca-1-960.webp",
+        "assets/produtos/chaveiro-nossa-senhora-1-960.webp"
+      ],
+      "adicionado": "2026-11-07",
+      "destaque": 6.5,
+      "personalizavel": "Nome ou frase do marcador",
+      "combina": [
+        "rosario-fidget",
+        "jesusinho"
+      ]
+    },
+    {
+      "id": "luminaria-foto",
+      "nome": "Luminária personalizada com foto",
+      "descricao": "Sua foto preferida vira uma luminária: apagada parece um relevo, acesa revela a imagem com todos os detalhes. Presente inesquecível para mães, casais e famílias.",
+      "categorias": [
+        "Personalizados",
+        "Luminárias"
+      ],
+      "selos": [
+        "Mais pedido"
+      ],
+      "personalizavel": "Conte qual foto você quer usar (você manda pelo WhatsApp)",
+      "fotos": [
+        "assets/produtos/luminaria-foto-1-960.webp",
+        "assets/produtos/luminaria-foto-2-960.webp",
+        "assets/produtos/luminaria-foto-3-960.webp"
+      ],
+      "destaque": 1.5,
+      "combina": [
+        "luminaria-aparecida",
+        "nome-casal",
+        "plaquinha-fe"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "luminaria-aparecida",
+      "nome": "Luminária Nossa Senhora Aparecida personalizada",
+      "descricao": "Luminária no formato do manto de Nossa Senhora Aparecida, com a sua família ou o seu casal desenhado no centro. Iluminação interna com botão liga/desliga.",
+      "categorias": [
+        "Personalizados",
+        "Luminárias",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "personalizavel": "Quem vai aparecer na luminária?",
+      "fotos": [
+        "assets/produtos/luminaria-aparecida-1-960.webp",
+        "assets/produtos/luminaria-aparecida-2-960.webp",
+        "assets/produtos/luminaria-aparecida-ig-1-960.webp",
+        "assets/produtos/luminaria-aparecida-ig-2-960.webp"
+      ],
+      "destaque": 2.6,
+      "combina": [
+        "luminaria-foto",
+        "nossa-senhora-aparecida",
+        "aparecida-com-nome"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "plaquinha-fe",
+      "nome": "Plaquinha da fé com nome",
+      "descricao": "Nome em 3D com uma santinha ao lado, em dourado e cores delicadas. Linda para quarto de bebê, batizado ou de presente.",
+      "categorias": [
+        "Personalizados",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "personalizavel": "Nome e santa/santo preferido",
+      "fotos": [
+        "assets/produtos/plaquinha-fe-1-960.webp",
+        "assets/produtos/plaquinha-fe-2-960.webp"
+      ],
+      "destaque": 4.2,
+      "combina": [
+        "aparecida-com-nome",
+        "chaveiro-divino-espirito-santo",
+        "nome-casal"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "aparecida-com-nome",
+      "nome": "Nossa Senhora Aparecida com nome",
+      "descricao": "Nossa Senhora Aparecida com manto bordado em relevo, coroa dourada e o nome de quem você ama na base. Feita com carinho para batizados e presentes.",
+      "categorias": [
+        "Personalizados",
+        "Religiosos",
+        "Estatuetas"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "personalizavel": "Nome na base",
+      "fotos": [
+        "assets/produtos/aparecida-com-nome-1-960.webp"
+      ],
+      "destaque": 3.2,
+      "combina": [
+        "plaquinha-fe",
+        "nossa-senhora-aparecida",
+        "porta-terco-nossa-senhora"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "jesus-surfista",
+      "nome": "Jesus surfista personalizado",
+      "descricao": "Jesus com prancha de surfe personalizada com o nome do seu grupo, família ou cidade. Uma homenagem cheia de bom humor e fé.",
+      "categorias": [
+        "Personalizados",
+        "Religiosos",
+        "Estatuetas"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "personalizavel": "O que vai escrito na prancha?",
+      "fotos": [
+        "assets/produtos/jesus-surfista-1-960.webp",
+        "assets/produtos/jesus-surfista-2-960.webp"
+      ],
+      "destaque": 5.5,
+      "combina": [
+        "jesusinho",
+        "rosario-fidget",
+        "chaveiro-divino-espirito-santo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-divino-espirito-santo",
+      "nome": "Chaveiro Divino Espírito Santo",
+      "descricao": "Pomba em relevo com raios dourados, em branco e dourado. Lembrete diário de fé, luz e proteção, ideal para lembrancinhas de crisma, batizado e primeira comunhão.",
+      "categorias": [
+        "Chaveiros",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "fotos": [
+        "assets/produtos/chaveiro-divino-espirito-santo-1-960.webp",
+        "assets/produtos/chaveiro-divino-espirito-santo-2-960.webp"
+      ],
+      "destaque": 4.8,
+      "combina": [
+        "chaveiro-nossa-senhora",
+        "rosario-fidget",
+        "plaquinha-fe"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "sao-carlo-acutis",
+      "nome": "São Carlo Acutis",
+      "descricao": "O jovem santo do nosso tempo: moletom, jeans, tênis branco, mochila nas costas e o terço na mão. Disponível em cor única ou colorido.",
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "variacoes": {
+        "nome": "Acabamento",
+        "opcoes": [
+          {
+            "nome": "Cor única"
+          },
+          {
+            "nome": "Colorido"
+          }
+        ]
+      },
+      "fotos": [
+        "assets/produtos/sao-carlo-acutis-1-960.webp",
+        "assets/produtos/sao-carlo-acutis-2-960.webp"
+      ],
+      "destaque": 3.6,
+      "combina": [
+        "sao-miguel-arcanjo",
+        "rosario-fidget",
+        "jesusinho"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "cortador-carimbo",
+      "nome": "Cortador de biscoito com carimbo",
+      "descricao": "Cortador e carimbo para biscoitos com desenho que marca certinho na massa. Temas prontos ou personalizado com nome, logo ou frase para datas especiais.",
+      "categorias": [
+        "Personalizados",
+        "Utilitários"
+      ],
+      "selos": [],
+      "personalizavel": "Tema, nome ou desenho do carimbo",
+      "fotos": [
+        "assets/produtos/cortador-carimbo-1-960.webp",
+        "assets/produtos/cortador-carimbo-2-960.webp",
+        "assets/produtos/cortador-carimbo-ig-1-960.webp",
+        "assets/produtos/cortador-carimbo-ig-2-960.webp"
+      ],
+      "destaque": 7.5,
+      "combina": [
+        "chaveiro-professor",
+        "marcador-personalizado"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "nome-casal",
+      "nome": "Nome do casal em 3D",
+      "descricao": "Nome do casal em letras 3D com acabamento dourado, feito sob medida. Presente de casamento que ninguém mais vai dar, lindo também como topo de bolo ou decoração.",
+      "categorias": [
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Nomes do casal",
+      "fotos": [
+        "assets/produtos/nome-casal-1-960.webp",
+        "assets/produtos/nome-casal-2-960.webp"
+      ],
+      "destaque": 6.2,
+      "combina": [
+        "luminaria-foto",
+        "plaquinha-fe"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-professor",
+      "nome": "Chaveiro personalizado para professor",
+      "descricao": "Chaveiro “PROF” com o nome da professora ou do professor, em cores à escolha. Lembrancinha perfeita para o Dia dos Professores e fim de ano letivo.",
+      "categorias": [
+        "Personalizados",
+        "Chaveiros"
+      ],
+      "selos": [],
+      "personalizavel": "Nome do professor(a)",
+      "fotos": [
+        "assets/produtos/chaveiro-professor-1-960.webp",
+        "assets/produtos/chaveiro-professor-2-960.webp"
+      ],
+      "destaque": 8.5,
+      "combina": [
+        "cortador-carimbo",
+        "marcador-personalizado"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "letreiro-nome",
+      "nome": "Letreiro com nome em 3D",
+      "descricao": "Nosso campeão de vendas: nome em letra cursiva 3D, na cor que você escolher. Fica lindo em quarto, festa, balcão, porta ou parede, e é presente certeiro.",
+      "categorias": [
+        "Personalizados",
+        "Decoração"
+      ],
+      "selos": [
+        "Mais pedido"
+      ],
+      "personalizavel": "Nome ou palavra e cor",
+      "fotos": [
+        "assets/produtos/letreiro-nome-1-960.webp",
+        "assets/produtos/letreiro-nome-2-960.webp",
+        "assets/produtos/letreiro-nome-3-960.webp",
+        "assets/produtos/letreiro-nome-4-960.webp"
+      ],
+      "destaque": 1.8,
+      "combina": [
+        "letreiro-profissao",
+        "nome-casal",
+        "plaquinha-fe"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "letreiro-profissao",
+      "nome": "Letreiro de profissão",
+      "descricao": "Nome com o símbolo ou a palavra da profissão (Prof, Enfermagem, Dra. e mais). Presente ideal para formaturas, Dia dos Professores e mesa de trabalho.",
+      "categorias": [
+        "Personalizados",
+        "Decoração"
+      ],
+      "selos": [],
+      "personalizavel": "Nome e profissão",
+      "fotos": [
+        "assets/produtos/letreiro-profissao-1-960.webp",
+        "assets/produtos/letreiro-profissao-2-960.webp",
+        "assets/produtos/letreiro-profissao-3-960.webp"
+      ],
+      "destaque": 5.8,
+      "combina": [
+        "letreiro-nome",
+        "chaveiro-profissao",
+        "porta-lapis"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-nome",
+      "nome": "Chaveiro com nome personalizado",
+      "descricao": "Chaveiro com o nome, apelido ou frase que você quiser, em letras estilizadas e cores à escolha. Ótimo para lembrancinhas em quantidade.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Nome ou frase",
+      "fotos": [
+        "assets/produtos/chaveiro-nome-1-960.webp",
+        "assets/produtos/chaveiro-nome-2-960.webp",
+        "assets/produtos/chaveiro-nome-3-960.webp"
+      ],
+      "destaque": 6.8,
+      "combina": [
+        "chaveiro-inicial",
+        "chaveiro-pet",
+        "chaveiro-professor"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-pet",
+      "nome": "Chaveiro do seu pet",
+      "descricao": "Seu cachorro ou gato em miniatura, pintado nas cores dele, para levar junto nas chaves.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Conte como é seu pet (a foto você manda no WhatsApp)",
+      "fotos": [
+        "assets/produtos/chaveiro-pet-1-960.webp"
+      ],
+      "destaque": 7.2,
+      "combina": [
+        "chaveiro-nome",
+        "chaveiro-inicial"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-inicial",
+      "nome": "Chaveiro com inicial e símbolo",
+      "descricao": "Letra inicial com nome e um símbolo à sua escolha (curso, fé, time, profissão). Um presente delicado e cheio de significado.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Inicial, nome e símbolo",
+      "fotos": [
+        "assets/produtos/chaveiro-inicial-1-960.webp"
+      ],
+      "destaque": 7.4,
+      "combina": [
+        "chaveiro-nome",
+        "chaveiro-profissao"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "chaveiro-profissao",
+      "nome": "Chaveiro de profissão",
+      "descricao": "Chaveiros com o símbolo e o nome da profissão, como Enfermagem. Perfeitos para turmas, formaturas e equipes.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Profissão e nomes",
+      "fotos": [
+        "assets/produtos/chaveiro-profissao-1-960.webp"
+      ],
+      "destaque": 7.6,
+      "combina": [
+        "letreiro-profissao",
+        "chaveiro-nome"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "ima-personalizado",
+      "nome": "Ímã personalizado para eventos",
+      "descricao": "Ímãs de geladeira coloridos com o tema do seu evento: Dia do Idoso, festas, empresas e lembrancinhas em quantidade.",
+      "categorias": [
+        "Personalizados",
+        "Lembrancinhas"
+      ],
+      "selos": [],
+      "personalizavel": "Tema e texto do ímã",
+      "fotos": [
+        "assets/produtos/ima-personalizado-1-960.webp",
+        "assets/produtos/ima-personalizado-2-960.webp"
+      ],
+      "destaque": 8.2,
+      "combina": [
+        "chaveiro-nome",
+        "chaveiro-divino-espirito-santo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "modelo-anatomico",
+      "nome": "Modelo anatômico personalizado",
+      "descricao": "Cérebro, pulmão e outras estruturas desenvolvidas do zero, com cores e divisões didáticas. Ideal para consultórios, clínicas, professores e estudantes da saúde.",
+      "categorias": [
+        "Personalizados",
+        "Colecionáveis"
+      ],
+      "selos": [],
+      "personalizavel": "Qual estrutura e para que uso",
+      "fotos": [
+        "assets/produtos/modelo-anatomico-1-960.webp",
+        "assets/produtos/modelo-anatomico-2-960.webp",
+        "assets/produtos/modelo-anatomico-3-960.webp"
+      ],
+      "destaque": 9.2,
+      "combina": [
+        "letreiro-profissao"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "porta-lapis",
+      "nome": "Porta-lápis personalizado",
+      "descricao": "Porta-lápis com o nome da professora ou de quem vai usar, na cor que você escolher. Organiza a mesa e vira um presente útil.",
+      "categorias": [
+        "Personalizados",
+        "Utilitários"
+      ],
+      "selos": [],
+      "personalizavel": "Nome e cor",
+      "fotos": [
+        "assets/produtos/porta-lapis-1-960.webp",
+        "assets/produtos/porta-lapis-2-960.webp"
+      ],
+      "destaque": 8,
+      "combina": [
+        "chaveiro-professor",
+        "ponteira-lapis",
+        "letreiro-profissao"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "ponteira-lapis",
+      "nome": "Ponteira de lápis",
+      "descricao": "Ponteira divertida para lápis, como a raposinha, ou personalizada com nome. A criançada adora e é ótima lembrancinha escolar.",
+      "categorias": [
+        "Personalizados",
+        "Utilitários"
+      ],
+      "selos": [],
+      "personalizavel": "Bichinho ou nome",
+      "fotos": [
+        "assets/produtos/ponteira-lapis-1-960.webp",
+        "assets/produtos/ponteira-lapis-2-960.webp",
+        "assets/produtos/ponteira-lapis-3-960.webp",
+        "assets/produtos/ponteira-lapis-4-960.webp"
+      ],
+      "destaque": 8.8,
+      "combina": [
+        "porta-lapis",
+        "chaveiro-professor"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "jesus-geometrico",
+      "nome": "Estatueta Jesus geométrica",
+      "descricao": "Jesus de braços abertos em estilo geométrico (low poly), moderno e marcante. Fica lindo em estantes e ambientes contemporâneos.",
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/jesus-geometrico-1-960.webp",
+        "assets/produtos/jesus-geometrico-2-960.webp"
+      ],
+      "destaque": 5.2,
+      "combina": [
+        "sagrada-familia",
+        "jesusinho",
+        "sao-miguel-arcanjo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "sagrada-familia",
+      "nome": "Sagrada Família",
+      "descricao": "Maria, José e o Menino Jesus em linhas suaves, em tons claros ou chocolate. Pode ser personalizada com nome ou frase na base, como “Eu e minha casa serviremos ao Senhor”.",
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "variacoes": {
+        "nome": "Modelo",
+        "opcoes": [
+          {
+            "nome": "Tradicional"
+          },
+          {
+            "nome": "Personalizada"
+          }
+        ]
+      },
+      "personalizavel": "Nome ou frase na base (se personalizada)",
+      "fotos": [
+        "assets/produtos/sagrada-familia-1-960.webp",
+        "assets/produtos/sagrada-familia-2-960.webp",
+        "assets/produtos/sagrada-familia-3-960.webp",
+        "assets/produtos/sagrada-familia-4-960.webp"
+      ],
+      "destaque": 2.8,
+      "combina": [
+        "nossa-senhora-aparecida",
+        "jesus-geometrico",
+        "conjunto-sao-bento"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "santos-base-personalizada",
+      "nome": "Imagem de santo com base personalizada",
+      "descricao": "São Pedro, Nossa Senhora, São José e outros santos com auréola dourada e o nome do seu encontro, grupo ou paróquia na base. Lembrança perfeita para palestrantes e eventos de fé.",
+      "categorias": [
+        "Religiosos",
+        "Personalizados",
+        "Lembrancinhas"
+      ],
+      "selos": [],
+      "personalizavel": "Santo(s) e texto da base",
+      "fotos": [
+        "assets/produtos/santos-base-personalizada-1-960.webp",
+        "assets/produtos/santos-base-personalizada-2-960.webp"
+      ],
+      "destaque": 6,
+      "combina": [
+        "chaveiro-divino-espirito-santo",
+        "plaquinha-fe"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "conjunto-sao-bento",
+      "nome": "Conjunto São Bento",
+      "descricao": "A imagem de São Bento, a Medalha de São Bento e uma vela de LED reunidas em uma peça para o seu altar ou cantinho de oração. Fé, proteção e luz suave.",
+      "categorias": [
+        "Religiosos",
+        "Decoração"
+      ],
+      "selos": [
+        "Novo"
+      ],
+      "fotos": [
+        "assets/produtos/conjunto-sao-bento-1-960.webp",
+        "assets/produtos/conjunto-sao-bento-2-960.webp"
+      ],
+      "destaque": 3.4,
+      "combina": [
+        "sao-miguel-arcanjo",
+        "rosario-fidget",
+        "sagrada-familia"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "vaso-saquinho",
+      "nome": "Vaso Saquinho",
+      "descricao": "Vaso que imita tecido franzido, com laço rústico de sisal amarrado à mão. Feito para flores secas como capim dos pampas, lagurus e trigo.",
+      "categorias": [
+        "Decoração"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/vaso-saquinho-1-960.webp",
+        "assets/produtos/vaso-saquinho-2-960.webp"
+      ],
+      "destaque": 9,
+      "combina": [
+        "coelhos-decorativos",
+        "letreiro-nome"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "coelhos-decorativos",
+      "nome": "Kit coelhos decorativos",
+      "descricao": "Coelhos em estilo canelado para decorar a casa na Páscoa ou o ano todo. Tamanhos de 25×20×15 cm e 15×12×10 cm, em cores claras.",
+      "categorias": [
+        "Decoração"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/coelhos-decorativos-1-960.webp"
+      ],
+      "destaque": 9.4,
+      "combina": [
+        "vaso-saquinho"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-07"
+    },
+    {
+      "id": "suporte-celular",
+      "nome": "Suporte de celular personalizado",
+      "descricao": "Suporte de mesa para celular com o seu nome ou a logo da sua marca. Firme, leve e ótimo para brindes de empresa.",
+      "categorias": [
+        "Utilitários",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Nome ou logo (a logo você manda no WhatsApp)",
+      "fotos": [
+        "assets/produtos/suporte-celular-1-960.webp",
+        "assets/produtos/suporte-celular-2-960.webp"
+      ],
+      "destaque": 7.6,
+      "combina": [
+        "chaveiro-empresas",
+        "chaveiro-nome"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-empresas",
+      "nome": "Chaveiros personalizados para empresas",
+      "descricao": "Chaveiros com a marca da sua empresa, embalados em saquinhos, para brindes, eventos e clientes.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados"
+      ],
+      "selos": [],
+      "personalizavel": "Logo e nome da empresa (mande a arte no WhatsApp)",
+      "fotos": [
+        "assets/produtos/chaveiro-empresas-1-960.webp"
+      ],
+      "destaque": 7.1,
+      "combina": [
+        "suporte-celular",
+        "ima-personalizado"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-camera-foto",
+      "nome": "Chaveiro câmera com foto",
+      "descricao": "Chaveiro em formato de câmera com uma foto de quem você ama. Uma lembrancinha delicada para aniversários e festas.",
+      "categorias": [
+        "Chaveiros",
+        "Personalizados",
+        "Lembrancinhas"
+      ],
+      "selos": [],
+      "personalizavel": "A foto você manda no WhatsApp",
+      "fotos": [
+        "assets/produtos/chaveiro-camera-foto-1-960.webp"
+      ],
+      "destaque": 7.4,
+      "combina": [
+        "chaveiro-nome",
+        "ima-personalizado"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-jesus-cruz",
+      "nome": "Chaveiro cruz Jesus",
+      "descricao": "Chaveiro em forma de cruz com o nome de Jesus em relevo. Disponível em várias cores.",
+      "categorias": [
+        "Chaveiros",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/chaveiro-jesus-cruz-1-960.webp",
+        "assets/produtos/chaveiro-jesus-cruz-2-960.webp"
+      ],
+      "destaque": 7.3,
+      "combina": [
+        "chaveiro-nossa-senhora",
+        "chaveiro-divino-espirito-santo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "plaquinha-pet",
+      "nome": "Plaquinha de osso com nome do pet",
+      "descricao": "Plaquinha em formato de osso com o nome do seu pet e patinhas. Fica linda na casinha, na caminha ou na parede.",
+      "categorias": [
+        "Personalizados",
+        "Decoração"
+      ],
+      "selos": [],
+      "personalizavel": "Nome do pet",
+      "fotos": [
+        "assets/produtos/plaquinha-pet-1-960.webp",
+        "assets/produtos/plaquinha-pet-2-960.webp"
+      ],
+      "destaque": 7.2,
+      "combina": [
+        "chaveiro-pet",
+        "letreiro-nome"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-polvo",
+      "nome": "Chaveiro polvo articulado",
+      "descricao": "Polvinho flexível com tentáculos articulados que se mexem. Divertido de apertar e de levar nas chaves.",
+      "categorias": [
+        "Chaveiros",
+        "Colecionáveis"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/chaveiro-polvo-1-960.webp",
+        "assets/produtos/chaveiro-polvo-2-960.webp"
+      ],
+      "destaque": 6.9,
+      "combina": [
+        "chaveiro-volei",
+        "chaveiro-coqueteleira"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-volei",
+      "nome": "Chaveiro bola de vôlei",
+      "descricao": "Mini bola de vôlei em 3D para quem vive o esporte. Ótimo presente para times e escolinhas.",
+      "categorias": [
+        "Chaveiros",
+        "Colecionáveis"
+      ],
+      "selos": [],
+      "personalizavel": "Cores do seu time",
+      "fotos": [
+        "assets/produtos/chaveiro-volei-1-960.webp"
+      ],
+      "destaque": 6.8,
+      "combina": [
+        "chaveiro-coqueteleira",
+        "chaveiro-polvo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "chaveiro-coqueteleira",
+      "nome": "Chaveiro coqueteleira",
+      "descricao": "Mini coqueteleira de academia em 3D. Presente certeiro para quem não perde um treino.",
+      "categorias": [
+        "Chaveiros",
+        "Colecionáveis"
+      ],
+      "selos": [],
+      "personalizavel": "Cores",
+      "fotos": [
+        "assets/produtos/chaveiro-coqueteleira-1-960.webp",
+        "assets/produtos/chaveiro-coqueteleira-2-960.webp"
+      ],
+      "destaque": 6.7,
+      "combina": [
+        "chaveiro-volei",
+        "chaveiro-polvo"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    },
+    {
+      "id": "nossa-senhora-de-fatima",
+      "nome": "Nossa Senhora de Fátima",
+      "descricao": "Imagem de Nossa Senhora de Fátima em linhas suaves, para o seu cantinho de oração.",
+      "categorias": [
+        "Estatuetas",
+        "Religiosos"
+      ],
+      "selos": [],
+      "fotos": [
+        "assets/produtos/nossa-senhora-de-fatima-1-960.webp"
+      ],
+      "destaque": 7.5,
+      "combina": [
+        "sao-miguel-arcanjo",
+        "rosario-fidget"
+      ],
+      "sobConsulta": true,
+      "adicionado": "2026-11-09"
+    }
+  ]
+}

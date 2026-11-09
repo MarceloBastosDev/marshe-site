@@ -1,0 +1,19 @@
+# Arquivos pessoais e de trabalho (não vão para o GitHub)
+senha supabase.txt
+*senha*
+*.env
+.env*
+_prints/
+Captura de tela*
+.claude/
+.agents/
+skills-lock.json
+node_modules/
+
+# Peças com marcas/personagens de terceiros: ficam guardadas só no computador
+assets/instagram-reserva/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

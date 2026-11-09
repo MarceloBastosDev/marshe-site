@@ -1,0 +1,9 @@
+.legal { background: var(--claro); }
+.legal__top { background: var(--laranja-escuro); }
+.legal__top .wrap { display: flex; align-items: center; min-height: 64px; }
+.legal__top .logo { --lh: 26px; }
+.legal__main { max-width: 760px; padding: 2.5rem 0 4rem; color: var(--tinta); font-size: .95rem; }
+.legal__main h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: .25rem; }
+.legal__main h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; color: var(--tinta); }
+.legal__main ul { padding-left: 1.2rem; display: grid; gap: .4rem; }
+.legal__date { color: var(--tinta-suave); font-size: .85rem; margin-bottom: 1.5rem; }

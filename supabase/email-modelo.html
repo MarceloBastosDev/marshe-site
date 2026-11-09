@@ -1,0 +1,40 @@
+<!--
+  MODELO DE E-MAIL DE ACESSO · Pontos Marshê
+  Use este mesmo texto em DOIS lugares do Supabase
+  (Authentication → Emails → Templates):
+    1) "Magic link or OTP"   → Assunto: Seu código de acesso Marshê
+    2) "Confirm sign up"     → Assunto: Bem-vindo(a) ao Pontos Marshê
+  Copie tudo a partir de <table ...> até o fim e cole no campo "Body" (Source).
+  Não apague {{ .Token }} nem {{ .ConfirmationURL }}: o Supabase troca pelo código e pelo link.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F4F4F4;padding:24px 0;font-family:Arial,Helvetica,sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border-radius:14px;overflow:hidden;">
+        <tr>
+          <td style="background:#D63803;padding:22px 28px;color:#ffffff;font-size:22px;font-weight:bold;">
+            Marshê <span style="font-size:12px;font-weight:normal;letter-spacing:3px;">studio 3D</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:28px;color:#33210F;font-size:15px;line-height:1.6;">
+            <p style="margin:0 0 12px;font-size:18px;font-weight:bold;">Seu código de acesso</p>
+            <p style="margin:0 0 18px;">Use este código para entrar no <strong>Pontos Marshê</strong> e ganhar 5% de volta nas suas compras:</p>
+            <p style="margin:0 0 22px;text-align:center;">
+              <span style="display:inline-block;padding:14px 22px;border-radius:10px;background:#FFF1EA;color:#FB4405;font-size:30px;font-weight:bold;letter-spacing:8px;">{{ .Token }}</span>
+            </p>
+            <p style="margin:0 0 22px;text-align:center;">
+              <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:13px 26px;border-radius:999px;background:#D63803;color:#ffffff;text-decoration:none;font-weight:bold;">Entrar na minha conta</a>
+            </p>
+            <p style="margin:0;color:#5F5F5F;font-size:13px;">O código vale por pouco tempo. Se você não pediu este acesso, é só ignorar este e-mail.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 28px;background:#FAFAFA;color:#5F5F5F;font-size:12px;">
+            Marshê Studio 3D · Terra de Areia/RS · <a href="https://www.marshe3d.com.br" style="color:#FB4405;">marshe3d.com.br</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
